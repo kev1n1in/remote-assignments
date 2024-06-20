@@ -5,50 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" href="icon/working.png">
+    <title>SWNews</title>
 </head>
 <body>
-    <nav>
-        <div class="logo"><h1>Logo</h1></div>
-        <input type="checkbox" id="switch">
-        <label for="switch">
-            <div class="hamburger-container">
-                <span></span>  
-                <span></span>
-        <!--     這兩個span是ham的線條       -->
-            </div>
-        </label>
-        <ul class="nav-bar">
-            <li><a href="#">常見問題</a></li>
-            <li><a href="#">註冊</a></li>
-            <li><a href="#">登入</a></li>
-            <li><a href="#">聯絡我們</a></li>
-        </ul>
-        <!-- 分兩個ul的原因是想做下拉式選單和一般的功能列 -->
-        <div class="ham-items">
-            <ul>
-              <li><img alt="question" src="icon/q&a.svg">常見問題</li>
-              <li><img alt="register" src="icon/register.svg">註冊</li>
-              <li><img alt="sign-in" src="icon/sign-in.svg">登入</li>
-              <li><img alt="contact" src="icon/contact.svg">聯絡我們</li>
+    <header>
+        <nav>
+            <div id="logo"><a href="#MainPage"><h1>SWNews</h1></a></div>
+            <input type="checkbox" id="switch">
+            <label for="switch">
+                <div class="hamburger-container">
+                    <span></span>  
+                    <span></span>
+            <!--     這兩個span是ham的線條       -->
+                </div>
+            </label>
+            <ul class="nav-bar">
+                <li><a href="#">常見問題</a></li>
+                <li><a href="#">註冊</a></li>
+                <li><a href="#">登入</a></li>
+                <li><a href="#">聯絡我們</a></li>
             </ul>
-          </div>
-    </nav>
+            <!-- 分兩個ul的原因是想做下拉式選單和一般的功能列 -->
+            <div class="ham-items">
+                <ul>
+                <li><img alt="question" src="icon/q&a.svg">常見問題</li>
+                <li><img alt="register" src="icon/register.svg">註冊</li>
+                <li><img alt="sign-in" src="icon/sign-in.svg">登入</li>
+                <li><img alt="contact" src="icon/contact.svg">聯絡我們</li>
+                </ul>
+            </div>
+        </nav>
+    </header>   
     <section class="WelcomeMessage">
         <h1>Welcome!</h1>
     </section>
 
     <section id="content">
-        <h1>Section title</h1>
+        <h1>Trivia</h1>
         <div class="container"> 
-            <article class="box">Content Box1</article>
-            <article class="box">Content Box2</article>
-            <article class="box">Content Box3</article>
-            <article class="box">Content Box4</article>
+            <article class="box">HTML tags</article>
+            <article class="box">Layout</article>
+            <article class="box">Good habits</article>
+            <article class="box">Version control</article>
         </div>
     </section>
     <footer>
-        <button>Call to action</button>
+        <button>去官網看看</button>
     </footer>
 </body>
 </html>

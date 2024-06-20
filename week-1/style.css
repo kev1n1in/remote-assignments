@@ -3,8 +3,18 @@ body{margin: 0px;}
 /* -------------------------
             NavBar
 ---------------------------- */
+#logo a{
+    color: #000;
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 100;
+}
 nav{
-    background-color: lightgray;
+    background-color: #eee;
     display: flex;
     flex-direction:row;
     justify-content: space-between;
@@ -49,7 +59,7 @@ nav h1{
     display:block;
     height: 1px;
     width: 30px;
-    background-color: white;
+    background-color: black;
     position: relative;
     top:0;
     transition:transform .3s ease-in-out,top .3s ease-in-out .3s;
@@ -72,7 +82,7 @@ nav h1{
     transition:top .3s ease-in-out,transform .3s ease-in-out;
 }
 .ham-items{
-    width: 20%;
+    width: auto;
     height: auto;
     top: 66px;
     right:0;
@@ -112,7 +122,7 @@ nav h1{
     transform:scaleY(1);
     opacity: 1;
   }
-img{
+.ham-items img{
     height: 12px;
     width: 12px;
     padding: 0 4px;
@@ -122,15 +132,18 @@ img{
 ---------------------------- */
 
 .WelcomeMessage{
-    height: 200px;
-    background-color: #85849a;
+    height: 240px;
+    background-color: #ccddee;
     line-height:200px;
+
 }
 .WelcomeMessage h1{
-    margin: 0;
+    padding-top: 24px;
     font-size: 3rem;
+    color: #000;
     text-align: center;
 }
+
 
 /* -------------------------
        Content Section
@@ -139,6 +152,7 @@ img{
 
 #content h1{
     font-size: 36px;
+    color: red;
     text-align: center;
 }
 .container{
@@ -157,12 +171,23 @@ article{
     margin:12px;
     width: 500px;
     height: 200px;
-    background-color: gray;
+    background-color: #8899aa;
     text-align: center;
     line-height:200px;
     justify-content: center;
 }
 
+.container .box{
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    transition: ease-in-out .3s;
+}
+    .container .box:hover{
+        font-size: 2rem;
+        transition: ease-in-out .3s;
+    }
 
 /* -------------------------
             Footer 
@@ -176,12 +201,18 @@ button{
     display: inline-block;
     margin:16px 0;
     padding: 18px 32px;
-    background-color: black;
-    color: white;
+    background-color:  #ddeeff;
+    color: balck;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     border: none;
+    transition:.3s ease-in-out;
+}
+button:hover{
+    font-weight: bold;
+    font-size: 20px;
+    transition:.3s ease-in-out;
 }
 
 
@@ -200,7 +231,7 @@ button{
     }
 }
 /* 螢幕寬度>=1200px時的布局 */
-@media screen and (min-width:801px) and (max-width:1200px){
+@media screen and (min-width:800px) and (max-width:1200px){
 
     article{
         width: 40%;
@@ -210,7 +241,7 @@ button{
     }
 }
 /* 螢幕寬度>=800px || 螢幕寬度<=1200px時的布局 */
-@media screen and (min-width:500px) and (max-width:800px){
+@media screen and (min-width:500px) and (max-width:799.5px){
     .nav-bar{
         display: none;
     }
