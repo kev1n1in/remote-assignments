@@ -158,16 +158,18 @@ nav h1{
 .container{
     width: 100%;
     margin: 0 auto;
-    display: flex;
+    display:flex;
     flex-direction:row;
     justify-content:space-evenly;
     flex-wrap: wrap;
 }
+
 article{
     cursor: pointer;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex-grow: 1;
     margin:12px;
     width: 500px;
     height: 200px;
@@ -176,7 +178,7 @@ article{
     line-height:200px;
     justify-content: center;
 }
-
+/* flex grow決定了flex item在container內若有剩餘空間會被分配到多少比例 */
 .container .box{
     font-size: 1.5rem;
     color: #000;
