@@ -40,7 +40,7 @@ function max(numbers){
 
 
 
-function calculater(args) {
+function calculator(args) {
     const operations = {
         "+":(n1,n2) => n1+n2,
         "-":(n1,n2) => n1-n2,
