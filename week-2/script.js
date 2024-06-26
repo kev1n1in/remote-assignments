@@ -3,12 +3,12 @@
 
 
 function max(numbers){
-    let maxNum = 0;
+    let maxNum = [0];
     for(let i =0; i<numbers.length; i++){
         if (numbers[i] > maxNum){
         maxNum= numbers[i]
         }
-    };
+    };return maxNum;
 }
 
 // function max(numbers){
@@ -40,7 +40,7 @@ function max(numbers){
 
 
 
-function calculate(args) {
+function calculater(args) {
     const operations = {
         "+":(n1,n2) => n1+n2,
         "-":(n1,n2) => n1-n2,
@@ -90,7 +90,9 @@ const discountedPrice = calculate({
     ]
 });
 
+
 function calculate(data) {
+    
    let total = 0;
    for (let product of data.products){
     total+=product.price;
