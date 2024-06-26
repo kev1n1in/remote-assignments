@@ -53,10 +53,10 @@ function calculater(args) {
     };
 }
 
-// console.log(calculate({ n1: 2, n2: 3, op: '+' })); // expected output: 5
-// console.log(calculate({ n1: 5, n2: 2, op: '-' }));  // expected output: 3
+// console.log(calculater({ n1: 2, n2: 3, op: '+' })); // expected output: 5
+// console.log(calculater({ n1: 5, n2: 2, op: '-' }));  // expected output: 3
 
-// console.log(calculate({ n1: 1, n2: 6, op: 'x' }));  // expected output: 'Not supported'
+// console.log(calculater({ n1: 1, n2: 6, op: 'x' }));  // expected output: 'Not supported'
 
 // 這邊的寫法是先在function內部宣告運算符計算方法,要乘除也可以,只要用*或/
 // 接下來就是設定operation是object裡面哪個值
@@ -65,6 +65,7 @@ function calculater(args) {
 // if後面條件直接設定operation就代表只要operation是真值(truthy) 舉凡數字或布林等非虛值
 // 在這個題目中"+"||"-"都會對n1 ,n2進行運算
 // 當不是這兩個運算符就會跳到"Not supported"
+// 由於function name重複 所以assignment 2的calculate改成calculater
 
 
 // -------------------------------------------------------------------------------------------
@@ -144,3 +145,5 @@ check_hide.addEventListener('click', ( )=>{
     hide_content.style.display = "flex"
     }
 )
+
+
