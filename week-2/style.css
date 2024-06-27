@@ -53,6 +53,7 @@ nav h1{
     position:relative;
     top:24px;
     right:24px;
+    z-index: 1;
 }
 
 .hamburger-container span{
@@ -84,8 +85,9 @@ nav h1{
 .ham-items{
     width: auto;
     height: 100vh;
-    top: 66px;
+    top: 0;
     right:0;
+    padding-top:30px ;
     color: black;
     background-color: white;
     position: absolute;
@@ -238,6 +240,10 @@ button:hover{
     .hamburger-container{
         display: none;
     }
+    .ham-items{
+        opacity :"0"
+    }
+
 }
 /* 螢幕寬度>=800px || 螢幕寬度<=1200px時的布局 */
 @media screen and (min-width:500px) and (max-width:799.5px){
@@ -247,6 +253,7 @@ button:hover{
     article{
         width: 40%;
     }
+
 }
 /* 螢幕寬度>=500px || 螢幕寬度<=800px時的布局 */
 @media screen and (max-width:501px){
