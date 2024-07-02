@@ -1,3 +1,5 @@
+const btn = document.getElementById('btn').addEventListener('click', sumData)
+
 function sumData() {
     const input = document.getElementById('text_number').value
     fetch('http://localhost:3000/getData', {
@@ -21,4 +23,4 @@ function sumData() {
         })
 }
 
-const btn = document.getElementById('btn').addEventListener('click', sumData)
+
