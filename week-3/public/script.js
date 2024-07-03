@@ -1,26 +1,22 @@
-const btn = document.getElementById('btn').addEventListener('click', sumData)
+const btn = document.getElementById("btn").addEventListener("click", sumData);
 
 function sumData() {
-    const input = document.getElementById('text_number').value
-    fetch('http://localhost:3000/getData', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ number: input })
+  const input = document.getElementById("text_number").value;
+  fetch(`http://localhost:3000/getData?number=${input}`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((res) => {
+      return res.text();
     })
-        .then(res => res.json())
-        .then(data => {
-            const result = document.getElementById('result')
-            if (data.error) {
-                result.innerText = data.error;
-            } else {
-                result.innerText = data.result;
-            }
-        })
-        .catch(error => {
-            document.getElementById('result').innerText = error;
-        })
+    .then((data) => {
+      result.innerHTML = `${data}`;
+    });
 }
 
-
+// 將fetch method更正為GET
+// Content-type更正為application/json
+// 為解決url直接連結會出現json格式的問題
+//
