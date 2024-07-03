@@ -11,7 +11,7 @@
 
 <h2>Week 3</h2>
 
+  - [Render](https://remote-assignments-week-3-5o60.onrender.com)
 <h2>Week 4</h2>
 
-Week2 notice :
-- Assignment2 and Assignment3 have the same function name ,so **I replace assignment2 function name with calculator.**
+ 
