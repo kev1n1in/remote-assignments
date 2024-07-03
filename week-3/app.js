@@ -43,10 +43,7 @@ app.get("/getData", (req, res) => {
     res.send("Wrong Parameter");
   } else {
     const num = parseInt(number);
-    let sum = 0;
-    for (let i = 1; i <= num; i++) {
-      sum += i;
-    }
+    let sum = ((1 + num) * num) / 2;
     res.send(`${sum}`);
   }
 });
