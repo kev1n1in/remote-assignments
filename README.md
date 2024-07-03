@@ -15,3 +15,5 @@
 <h2>Week 4</h2>
 
  
+week3 notice:
+- change for loop to (n*(n+1))/2 ,avoiding high latency
