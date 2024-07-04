@@ -2,7 +2,7 @@ document.getElementById("btn").addEventListener("click", sumData);
 
 function sumData() {
   const input = document.getElementById("text_number").value;
-  fetch(`http://localhost:3000/getData?number=${input}`, {
+  fetch(`/getData?number=${input}`, {
     method: "GET",
     headers: {
       Accept: "application/json",
