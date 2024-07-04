@@ -1,4 +1,4 @@
-const btn = document.getElementById("btn").addEventListener("click", sumData);
+document.getElementById("btn").addEventListener("click", sumData);
 
 function sumData() {
   const input = document.getElementById("text_number").value;
