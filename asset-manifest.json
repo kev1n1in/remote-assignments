@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/remote-assignments/week-4/static/css/main.d7e89590.css",
-    "main.js": "/remote-assignments/week-4/static/js/main.1a3adf49.js",
-    "static/js/453.555b1360.chunk.js": "/remote-assignments/week-4/static/js/453.555b1360.chunk.js",
-    "index.html": "/remote-assignments/week-4/index.html",
-    "main.d7e89590.css.map": "/remote-assignments/week-4/static/css/main.d7e89590.css.map",
-    "main.1a3adf49.js.map": "/remote-assignments/week-4/static/js/main.1a3adf49.js.map",
-    "453.555b1360.chunk.js.map": "/remote-assignments/week-4/static/js/453.555b1360.chunk.js.map"
+    "main.css": "/remote-assignments/week-4/assignments3/static/css/main.d7e89590.css",
+    "main.js": "/remote-assignments/week-4/assignments3/static/js/main.f94b9b1f.js",
+    "static/js/453.555b1360.chunk.js": "/remote-assignments/week-4/assignments3/static/js/453.555b1360.chunk.js",
+    "index.html": "/remote-assignments/week-4/assignments3/index.html",
+    "main.d7e89590.css.map": "/remote-assignments/week-4/assignments3/static/css/main.d7e89590.css.map",
+    "main.f94b9b1f.js.map": "/remote-assignments/week-4/assignments3/static/js/main.f94b9b1f.js.map",
+    "453.555b1360.chunk.js.map": "/remote-assignments/week-4/assignments3/static/js/453.555b1360.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d7e89590.css",
-    "static/js/main.1a3adf49.js"
+    "static/js/main.f94b9b1f.js"
   ]
 }
