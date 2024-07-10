@@ -1,28 +1,45 @@
 import "./App.css";
 import { useState } from "react";
 
-export default function MyApp() {
-  const [count, setCount] = useState(0);
+function App() {
+  const [counters, setCounters] = useState([0, 0, 0]);
+  const [incrementAll, setIncrementAll] = useState([0, 0, 0]);
 
-  const AllAddOne = () => {
-    setCount(count + 1);
+  const addCounter = () => {
+    setCounters([...counters, 0]);
+    setIncrementAll([...incrementAll, 0]);
   };
-  const incresement = () => {};
-
+  const incrementAllOne = () => {
+    const newIncrementAll = incrementAll.map((count) => count + 1);
+    setIncrementAll(newIncrementAll);
+  };
   return (
-    <div>
-      <h1>Counters</h1>
-      <MyButton count={count} onClick={AllAddOne} />
-      <MyButton></MyButton>
+    <div id="app">
+      <div className="left">
+        <button className="counters" onClick={incrementAllOne}>
+          All+1
+        </button>
+        {counters.map((_, index) => (
+          <Counter key={index} incrementAll={incrementAll} id={index} />
+        ))}
+      </div>
+      <button className="counters addCounter" onClick={addCounter}>
+        Add a Counter
+      </button>
     </div>
   );
 }
 
-function MyButton({ count, onClick }) {
+function Counter({ incrementAll, id }) {
+  const [count, setCount] = useState(0);
   return (
-    <>
-      <button onClick={onClick}>+1</button>
-      {count}
-    </>
+    <div>
+      <button className="counters counter" onClick={() => setCount(count + 1)}>
+        +1
+      </button>
+      <span>{count + incrementAll[id]}</span>
+    </div>
   );
 }
+
+export default App;
