@@ -2,18 +2,14 @@ const url =
   "https://remote-assignment.s3.ap-northeast-1.amazonaws.com/products";
 
 function ajax(url) {
-  return fetch(url, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-    },
-  })
+  return fetch(url)
     .then((response) => response.json())
     .catch((err) => {
       window.alert(err);
       return [];
     });
 }
+//第一步一樣先抓api下來  由於fetch預設方法就是"GET"所以這邊就不多寫,JSON傳換成json物件
 
 function render(data) {
   const result = document.getElementById("result");
@@ -44,6 +40,10 @@ function render(data) {
     </section>
   `;
 }
+// render這邊就負責把傳入的資料渲染
+// 首先抓result當innerHTML的點
+// 然後就把資料格式設定好 這邊要注意的是不加.join 會跑版
+// join可以把資料合併成一個再回傳
 
 ajax(url).then((data) => {
   render(data);
