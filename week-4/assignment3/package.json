@@ -1,7 +1,7 @@
 {
   "name": "week-4",
   "version": "0.1.0",
-  "homepage": "https://kev1n1in.github.io/remote-assignments/week-4/assignments3",
+  "homepage": "https://kev1n1in.github.io/remote-assignments",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,9 +14,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
