@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 2</title>
-    <link rel="stylesheet" href="style.css"></link>
-</head>
-<body>
-    <div id="result"></div>
-</body>
-<script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <template id="product-template">
+        <li class="card">
+          <div class="product_items product_name" ></div>
+          <div class="product_items product_des" ></div>
+          <div class="product_items product_price" ></div>
+        </li>
+      </template>
+      <section>
+        <h2 class="product_items">產品介紹</h2>
+        <div id="products">
+          <ul class="product_cards" id="product-list"></ul>
+        </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
 </html>

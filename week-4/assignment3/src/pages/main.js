@@ -81,14 +81,14 @@ export const Footer = () => {
       <footer className>
         <button onClick={clickEvent}>點我看更多</button>
       </footer>
-      {isVisible ? (
+      {isVisible && (
         <div className="container">
           <article className="box">HTML tags</article>
           <article className="box">Layout</article>
           <article className="box">Good habits</article>
           <article className="box">Version control</article>
         </div>
-      ):null}
+      )}
     </div>
   );
 };
@@ -96,7 +96,8 @@ export const Footer = () => {
 // 由於react裡面要用event的方法是使用onClick來觸發 所以原本的addEventListener就要改掉
 // 把原本display:none刪掉 換成判斷式 只有在前面為true的時候才會渲染後面的元素
 // 原本我是寫&& 後來查到一篇文章說 當回傳值不是boolean的時候會報錯
-// 才改成三元運算符
+// 才改成三元運算符,
+// 2024/7/10 如果確定回傳值一定是boolean就可以直接用&&
 // onClick觸發 clickEvent後 會跑
 
 
