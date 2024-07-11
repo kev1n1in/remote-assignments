@@ -13,7 +13,7 @@
 
   - [Render](https://remote-assignments-week-3-5o60.onrender.com)
 <h2>Week 4</h2>
-
+  - [React APP](https://kev1n1in.github.io/remote-assignments/)
  
-week3 notice:
-- change for loop to (n*(n+1))/2 ,avoiding high latency
+week4 notice:
+- [Notes](https://medium.com/@KeVinL1n/week4-%E7%AD%86%E8%A8%98-ba6112fec7ea)
