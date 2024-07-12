@@ -2,7 +2,8 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 
 function ajax(page) {
-  const url = `https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}}`;
+  const url = `https://api.github.com/orgs/facebook/repos?per_page=5&page=${page}`;
+
   return fetch(url)
     .then((response) => response.json())
     .catch((err) => {
@@ -13,7 +14,7 @@ function ajax(page) {
 
 function App() {
   const [repos, setRepos] = useState([]);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     loadRepos(page);

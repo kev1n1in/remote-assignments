@@ -12,14 +12,14 @@ function ajax(url) {
 
 
 function render(data) {
-  const productList = document.getElementById("product-list");
-  const template = document.getElementById("product-template").content;
+  const productList = document.getElementById("product__list");
+  const template = document.getElementById("product__template").content;
 
   data.forEach((product) => {
     const clone = template.cloneNode(true); 
-    clone.querySelector(".product_name").textContent = product.name;
-    clone.querySelector(".product_des").textContent = product.description;
-    clone.querySelector(".product_price").textContent = `$${product.price}`;
+    clone.querySelector(".product__name").textContent = product.name;
+    clone.querySelector(".product__des").textContent = product.description;
+    clone.querySelector(".product__price").textContent = `$${product.price}`;
     productList.appendChild(clone);
   });
 }
