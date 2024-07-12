@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
   } 
-  .product_cards{
+  .product__cards{
     display: grid;
     grid: auto-flow/repeat(3,1fr);
     grid-gap:8px;
     padding: 0px;
   }
-  .card{
+  .template__card{
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -20,22 +20,21 @@
     border-radius:8px;
     box-shadow: 2px 4px 0px 0px rgba(0,0,0,0.2);
   }
-  .product_items{
+  .product__items{
     text-align: center;
     margin:0 16px;
   }
   
-  .product_name{
+  .product__name{
     font-size: 24px;
     padding-bottom: 24px;
   }
-  .product_price{
+  .product__price{
     margin-top:auto;
     font-weight: bold;
     text-align: right;
-  
   }
-  .product_des{
+  .product__des{
     margin-top: auto;
     padding-bottom: 24px;
   } 

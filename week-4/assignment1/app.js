@@ -1,8 +1,8 @@
 function delayedResult(n1, n2, delayTime) {
-  return new Promise((res, rej) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       const result = n1 + n2;
-      res(result);
+      resolve(result);
     }, delayTime);
   });
 }
