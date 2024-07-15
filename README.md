@@ -18,3 +18,4 @@
  
 week4 notice:
 - [Notes](https://medium.com/@KeVinL1n/week4-%E7%AD%86%E8%A8%98-ba6112fec7ea)
+- [BEM](https://medium.com/p/444d0fb3f7ca/edit)
