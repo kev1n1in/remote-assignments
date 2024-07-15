@@ -7,6 +7,12 @@ function delayedResult(n1, n2, delayTime) {
   });
 }
 
+delayedResult(4, 5, 3000).then(console.log);
+delayedResult(-5, 10, 2000).then(window.alert);
+
+// 由於.then是接收Promise 所以必須要先把前面的function回傳值包裝成Promise
+// 這樣then就能接收到delayedResult的值了
+
 // setTimeout(()=>{},delayTime) 範本
 // 會先把delayTime 跑完才跑裡面的callback
 // callback會跑裡面的parameter
@@ -25,10 +31,6 @@ function delayedResult(n1, n2, delayTime) {
 // delayedResult(4, 5, 3000).then(console.log);
 // 要怎麼實作
 
-delayedResult(4, 5, 3000).then(console.log);
-delayedResult(-5, 10, 2000).then(window.alert);
 
-// 由於.then是接收Promise 所以必須要先把前面的function回傳值包裝成Promise
-// 這樣then就能接收到delayedResult的值了
 
 
