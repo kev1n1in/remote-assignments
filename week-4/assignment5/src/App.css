@@ -1,12 +1,9 @@
 #app{
   display: flex;
   flex-direction: column;
-  height: 100vh;
   align-items: center;
   justify-content: center;
-}
-.left{
-  margin-right: 75px;
+  height: 100vh;
 }
 .counters{
   margin: 8px 8px;
@@ -16,6 +13,10 @@
   text-align: center;
   cursor: pointer;
 }
-.counter ,.addCounter{
+.counters--left{
+  margin-right: 75px;
+}
+
+.counter__button ,.addCounter__button{
   padding: 0 16px;
 }

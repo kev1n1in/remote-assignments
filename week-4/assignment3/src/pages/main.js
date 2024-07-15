@@ -4,18 +4,18 @@ export const Navbar = () => {
   return (
     <nav>
       <div id="logo">
-        <a href="#MainPage">
-          <h2 className="logo_name">SWNews</h2>
+        <a className="logo__a" href="#MainPage">
+          <h1 className="logo__name">SWNews</h1>
         </a>
       </div>
       <input type="checkbox" id="switch" />
       <label for="switch">
-        <div className="hamburger-container">
+        <div className="hamburger__container">
           <span></span>
           <span></span>
         </div>
       </label>
-      <ul className="nav-bar">
+      <ul className="nav__bar">
         <li>
           <a>常見問題</a>
         </li>
@@ -30,7 +30,7 @@ export const Navbar = () => {
         </li>
       </ul>
 
-      <div className="ham-items">
+      <div className="ham__items">
         <ul>
           <li>常見問題</li>
           <li>註冊</li>
@@ -46,9 +46,9 @@ export const WelcomeMessage = () => {
   const [welcomeMessage, setWelcomeMessage] = useState("Welcome!");
   return (
     <section id="WelcomeMessage">
-      <h1 onClick={() => setWelcomeMessage("Have a Good Time!")}>
+      <h2 onClick={() => setWelcomeMessage("Have a Good Time!")}>
         {welcomeMessage}
-      </h1>
+      </h2>
     </section>
   );
 };
@@ -61,11 +61,11 @@ export const Content = () => {
   return (
     <section id="content">
       <h2 id="Trivia">Trivia</h2>
-      <div className="container">
-        <article className="box">HTML tags</article>
-        <article className="box">Layout</article>
-        <article className="box">Good habits</article>
-        <article className="box">Version control</article>
+      <div className="content__container">
+        <article className="content__box">HTML tags</article>
+        <article className="content__box">Layout</article>
+        <article className="content__box">Good habits</article>
+        <article className="content__box">Version control</article>
       </div>
     </section>
   );
@@ -78,15 +78,15 @@ export const Footer = () => {
   };
   return (
     <div>
-      <footer className>
-        <button onClick={clickEvent}>點我看更多</button>
+      <footer>
+        <button className="footer__button" onClick={clickEvent}>點我看更多</button>
       </footer>
       {isVisible && (
-        <div className="container">
-          <article className="box">HTML tags</article>
-          <article className="box">Layout</article>
-          <article className="box">Good habits</article>
-          <article className="box">Version control</article>
+        <div className="content__container">
+          <article className="content__box">HTML tags</article>
+          <article className="content__box">Layout</article>
+          <article className="content__box">Good habits</article>
+          <article className="content__box">Version control</article>
         </div>
       )}
     </div>

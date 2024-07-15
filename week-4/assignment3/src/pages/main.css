@@ -3,11 +3,11 @@ body{margin: 0px;}
 /* -------------------------
             NavBar
 ---------------------------- */
-#logo a{
+.logo__a{
     color: #000;
     text-decoration: none;
 }
-.logo_name{
+.logo__name{
     padding-left: 32px;
 }
 header{
@@ -24,10 +24,9 @@ nav{
     justify-content: space-between;
     position: fixed;
 }
-nav h1{
-    padding-left: 50px;
-}
-.nav-bar{
+
+.nav__bar{
+    cursor: pointer;
     padding-top: 4px;
     padding-left: 0px;
     display:flex;
@@ -36,13 +35,13 @@ nav h1{
     list-style: none;
 
 }
-    .nav-bar a{
+    .nav__bar a{
         padding: 0 24px;
         color: black;
         list-style: none;
         text-decoration: none;
     }
-    .nav-bar a:hover{
+    .nav__bar a:hover{
         font-weight: bold;
     }
 
@@ -50,7 +49,7 @@ nav h1{
 /* -------------------------
         hamburger togger
 ---------------------------- */
-.hamburger-container{
+.hamburger__container{
     cursor: pointer;
     display:block;
     width: 20px;
@@ -61,7 +60,7 @@ nav h1{
     z-index: 1;
 }
 
-.hamburger-container span{
+.hamburger__container span{
     display:block;
     height: 1px;
     width: 30px;
@@ -70,24 +69,24 @@ nav h1{
     top:0;
     transition:transform .3s ease-in-out,top .3s ease-in-out .3s;
 }
-.hamburger-container span:nth-child(2){
+.hamburger__container span:nth-child(2){
     margin-top:7px;
   }
 #switch {
     display: none;
 }
 
-#switch:checked + label .hamburger-container span:nth-child(1){
+#switch:checked + label .hamburger__container span:nth-child(1){
     transform:rotate(45deg);
     top: 4px;
     transition:top .3s ease-in-out,transform .3s ease-in-out;
 }
-#switch:checked + label .hamburger-container span:nth-child(2){
+#switch:checked + label .hamburger__container span:nth-child(2){
     transform:rotate(-45deg);
     top: -4px;
     transition:top .3s ease-in-out,transform .3s ease-in-out;
 }
-.ham-items{
+.ham__items{
     width: auto;
     height: 100vh;
     top: 0;
@@ -105,29 +104,29 @@ nav h1{
 }
 
 
-#switch:checked ~ .ham-items {
+#switch:checked ~ .ham__items {
     transform:scaleY(1);
     opacity: 1;
   }
 
-.ham-items ul{
+.ham__items ul{
     padding: 0;
     list-style: none;
 }
-.ham-items li{
+.ham__items li{
     margin: 0 12px;
     font-size: 16px;
     padding: 8px 120px 8px 0;
     text-align:left;
     transition:ease-in-out .3s;
 }
-.ham-items li:hover{
+.ham__items li:hover{
     cursor: pointer;
     background-color:rgba(96, 95, 95, 0.567);
     transition:ease-in-out .3s;
 }
 
-.ham-items img{
+.ham__items img{
     height: 12px;
     width: 12px;
     padding: 0 4px;
@@ -143,7 +142,7 @@ nav h1{
     line-height:2;
 
 }
-#WelcomeMessage h1{
+#WelcomeMessage h2{
     margin: 0;
     padding: 64px 0;
     font-size: 3rem;
@@ -162,7 +161,7 @@ nav h1{
     color: red;
     text-align: center;
 }
-.container{
+.content__container{
     width: 100%;
     margin: 0 auto;
     display:flex;
@@ -171,7 +170,7 @@ nav h1{
     flex-wrap: wrap;
 }
 
-article{
+.content__box{
     cursor: pointer;
     display:flex;
     flex-direction: row;
@@ -185,15 +184,15 @@ article{
     line-height:200px;
     justify-content: center;
 }
-/* flex grow決定了flex item在container內若有剩餘空間會被分配到多少比例 */
-.container .box{
+/* flex grow決定了flex item在content__container內若有剩餘空間會被分配到多少比例 */
+.content__container .content__box{
     font-size: 1.5rem;
     color: #000;
     text-decoration: none;
     text-align: center;
     transition: ease-in-out .3s;
 }
-    .container .box:hover{
+    .content__container .content__box:hover{
         font-size: 2rem;
         transition: ease-in-out .3s;
     }
@@ -205,7 +204,7 @@ footer{
     display: flex;
     justify-content: center; 
 }
-button{
+.footer__button{
     cursor: pointer;
     display: inline-block;
     margin:16px 0;
@@ -218,15 +217,12 @@ button{
     border: none;
     transition:.3s ease-in-out;
 }
-button:hover{
+.footer__button:hover{
     font-weight: bold;
     font-size: 20px;
     transition:.3s ease-in-out;
 }
 
-.hide{
-    display: none;
-}
 
 /*====================================
     Media Queries
@@ -234,33 +230,33 @@ button:hover{
 
 
 @media screen and (min-width:1200px){
-    .container{
+    .content__container{
         max-width: 1200px;
     }
-    .hamburger-container{
+    .hamburger__container{
         display: none;
     }
 }
 /* 螢幕寬度>=1200px時的布局 */
 @media screen and (min-width:800px) and (max-width:1200px){
 
-    article{
+    .content__box{
         width: 40%;
     }
-    .hamburger-container{
+    .hamburger__container{
         display: none;
     }
-    .ham-items{
+    .ham__items{
         opacity :"0"
     }
 
 }
 /* 螢幕寬度>=800px || 螢幕寬度<=1200px時的布局 */
 @media screen and (min-width:500px) and (max-width:799.5px){
-    .nav-bar{
+    .nav__bar{
         display: none;
     }
-    article{
+    .content__box{
         width: 40%;
     }
 
@@ -270,10 +266,10 @@ button:hover{
     html{
         min-width: 300px;
     }
-    .nav-bar{
+    .nav__bar{
         display: none;
     }
-    .box{
+    .content__box{
         max-width: 400px;
     }
 }
