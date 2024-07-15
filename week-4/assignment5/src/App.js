@@ -2,8 +2,8 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  // 三個counter的初始值用array表示 ,後面的count代表全加1 跟個別加1
-  const [state, setState] = useState({ counters: [0, 0, 0], count: 0 });
+  // 三個counter的初始值用array表示 
+  const [state, setState] = useState({counters:[0, 0, 0]});
 
   // 解構counter 複製一個出來 初始值0
   // 使用展開運算符來複製當前counters 當run addCounter時 在counters後面增加一個初始值為0的counter
@@ -36,7 +36,7 @@ function App() {
     <div id="app">
       <div className="counters--left">
         {/* 全加1按鈕 */}
-        <button className="counters" onClick={allIncrementOne}>
+        <button className="counters button" onClick={allIncrementOne}>
           All+1
         </button>
         {/* 自動插入新的counters */}
@@ -44,7 +44,7 @@ function App() {
         {state.counters.map((_,index) => (
           <div key={index}>
             <button
-              className="counters counter__button"
+              className="counters button counter__button"
               onClick={() => increment(index)}
             >
               +1
@@ -53,7 +53,7 @@ function App() {
           </div>
         ))}
       </div>
-      <button className="counters addCounter__button" onClick={addCounter}>
+      <button className="counters button addCounter__button" onClick={addCounter}>
         Add a Counter
       </button>
     </div>
